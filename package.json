@@ -2,7 +2,7 @@
   "name": "babel-plugin-add-header-comment",
   "version": "1.0.0",
   "description": "Will add a comment to the start of the transpiled code",
-  "main": "index.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "author": {
     "name": "Mikko Haapoja",
@@ -10,9 +10,13 @@
     "url": "https://github.com/mikkoh"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.13.2",
+    "mocha": "^3.0.2"
+  },
   "scripts": {
-    "test": "node test.js"
+    "test": "mocha test/index.js"
   },
   "keywords": [
     "babel,plugin,header,comment"
