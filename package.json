@@ -1,0 +1,28 @@
+{
+  "name": "babel-plugin-add-header-comment",
+  "version": "1.0.0",
+  "description": "Will add a comment to the start of the transpiled code",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Mikko Haapoja",
+    "email": "me@mikkoh.com",
+    "url": "https://github.com/mikkoh"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "babel,plugin,header,comment"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikkoh/babel-plugin-add-header-comment.git"
+  },
+  "homepage": "https://github.com/mikkoh/babel-plugin-add-header-comment",
+  "bugs": {
+    "url": "https://github.com/mikkoh/babel-plugin-add-header-comment/issues"
+  }
+}
