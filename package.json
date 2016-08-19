@@ -4,11 +4,7 @@
   "description": "Will add a comment to the start of the transpiled code",
   "main": "lib/index.js",
   "license": "MIT",
-  "author": {
-    "name": "Mikko Haapoja",
-    "email": "me@mikkoh.com",
-    "url": "https://github.com/mikkoh"
-  },
+  "author": "Shopify Inc.",
   "dependencies": {},
   "devDependencies": {
     "babel": "^6.5.2",
