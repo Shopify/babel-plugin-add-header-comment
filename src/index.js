@@ -1,5 +1,3 @@
-'use strict';
-
 import fs from 'fs';
 import childProcess from 'child_process';
 
