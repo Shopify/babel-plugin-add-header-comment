@@ -1,9 +1,9 @@
 'use strict';
 
-const fs = require('fs');
-const childProcess = require('child_process');
+import fs from 'fs';
+import childProcess from 'child_process';
 
-module.exports = (babel) => {
+export default (babel) => {
   const t = babel.types;
 
   return {
