@@ -2,7 +2,10 @@
 
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
-Will add a comment to the start of the transpiled code.
+Will add a comment to the start of the transpiled code. For instance could be used:
+- to add in license info 
+- add in version numbers to builds
+- etc.
 
 ## Usage
 

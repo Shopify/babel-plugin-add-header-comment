@@ -1,0 +1,6 @@
+"eslintConfig": {
+  "extends": "plugin:shopify/esnext",
+  "env": {
+    
+  }
+}

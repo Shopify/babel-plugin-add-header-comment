@@ -1,9 +1,17 @@
+import testCommentLine from './test-comment-line';
+import testExec from './test-exec';
+import testOptionCommentModifiers from './test-option-comment-modifiers';
+import testOptionNewline from './test-option-newline';
+import testOptionNoHeader from './test-option-no-header';
+import testRead from './test-read';
+import testUseAll from './test-use-all';
+
 describe('Using plugin in different ways', () => {
-  require('./test-option-comment-modifiers');
-  require('./test-option-newline');
-  require('./test-option-no-header');
-  require('./test-comment-line');
-  require('./test-exec');
-  require('./test-read');
-  require('./test-use-all');
+  testOptionCommentModifiers();
+  testOptionNewline();
+  testOptionNoHeader();
+  testCommentLine();  
+  testExec();
+  testRead();
+  testUseAll();
 });

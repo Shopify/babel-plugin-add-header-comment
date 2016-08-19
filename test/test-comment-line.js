@@ -1,21 +1,23 @@
-const assert = require('assert');
-const fs = require('fs');
-const path = require('path');
-const babel = require('babel-core');
-const plugin = require('../src');
+import assert from 'assert';
+import fs from 'fs';
+import path from 'path';
+import * as babel from 'babel-core';
+import plugin from '../src';
 
-it('should work using comment line', () => {
-  const expect = fs.readFileSync(path.join(__dirname, 'expect-comment-line'), 'utf8');
+export default function() {
+  it('should work using comment line', () => {
+    const expect = fs.readFileSync(path.join(__dirname, 'expect-comment-line'), 'utf8');
 
-  const result = babel.transform('console.log("HEY GREAT COMMENT")', {
-    plugins: [
-      [plugin, {
-        header: [
-          'have to support me and our three children and the dog once it gets '
-        ]
-      }]
-    ]
+    const result = babel.transform('console.log("HEY GREAT COMMENT")', {
+      plugins: [
+        [plugin, {
+          header: [
+            'have to support me and our three children and the dog once it gets '
+          ]
+        }]
+      ]
+    });
+
+    assert.equal(result.code, expect, 'output matched expected');
   });
-
-  assert.equal(result.code, expect, 'output matched expected');
-});
+};
