@@ -4,6 +4,7 @@ import testOptionCommentModifiers from './test-option-comment-modifiers';
 import testOptionNewline from './test-option-newline';
 import testOptionNoHeader from './test-option-no-header';
 import testRead from './test-read';
+import testTranspileFile from './test-transpile-file';
 import testUseAll from './test-use-all';
 
 describe('Using plugin in different ways', () => {
@@ -14,4 +15,5 @@ describe('Using plugin in different ways', () => {
   testExec();
   testRead();
   testUseAll();
+  testTranspileFile();
 });

@@ -2,5 +2,20 @@
   "ignore": false,
   "presets": [
     "es2015"
-  ]
+  ],
+  "env": {
+    "test-plugin": {
+      "plugins": [
+        ["./lib/index.js", {
+          "files": {
+            "toTranspileB.js": {
+              "header": [
+                "THIS IS A COMMENT"
+              ]
+            }
+          }
+        }]
+      ]
+    }
+  }
 }

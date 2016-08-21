@@ -1,0 +1,25 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  console.log('IM A TRANSPILE YOU');
+};
+
+;
+/**
+* THIS IS A COMMENT
+**/'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  console.log('YEAH ME TOO');
+};
+
+;
+
