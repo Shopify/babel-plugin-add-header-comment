@@ -24,7 +24,7 @@ The following is an example `.babelrc` file. Using the following settings the co
   "plugins": [
     ["add-header-comment", {
       "header": [
-        "This string will be inserted in",
+        "This string will be inserted in a comment header",
         "!node executeThisOutputAddedToHeader.js",
         "?readInTheContentsOfThisFile.txt"
       ]
@@ -32,6 +32,35 @@ The following is an example `.babelrc` file. Using the following settings the co
   ]
 }
 ```
+
+Sometimes you may want to just add headers to specific files. In this case you can do the following:
+```javascript
+{
+  "presets": ["es2015"],
+  "plugins": [
+    ["add-header-comment", {
+      "files": {
+        "src/index.js": {
+          "header": [
+            "This string will be inserted in a comment header"
+          ]
+        }
+      }
+    }]
+  ]
+}
+```
+
+## Plugin Options
+
+- `newLineChar`- This is the newline char that should be used by the plugin. Default value: `'\n'`
+- `cache` - This is a string which represents what type of operations should be cached. For instance if you wanted to cache both read and command executions you could pass in `?!`. Default value: `'?'`
+- `commentStart`- This is a string which describes how the comment is started/opened. Default value: `'/**\n'`
+- `commentEnd`- This is a string which describes how the comment is ended/closed. Default value: `'\n**/'`
+- `commentLineStart`- A string which is the leading charachter before a comment. Default value: `'* '`;
+
+
+
 
 ## License
 

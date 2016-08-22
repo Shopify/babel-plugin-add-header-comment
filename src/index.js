@@ -1,6 +1,8 @@
 import fs from 'fs';
 import childProcess from 'child_process';
 
+const CACHE = {};
+
 export default (babel) => {
   const t = babel.types;
 
@@ -12,7 +14,8 @@ export default (babel) => {
             commentLineStart: '* ',
             charRead: '?',
             charExec: '!',
-            newLineChar: '\n'
+            newLineChar: '\n',
+            cache: '?'
           },
           state.opts
         );
@@ -89,15 +92,37 @@ function insertHeader(t, path, opts, header) {
 }
 
 function getLinesFromFile(file, opts) {
-  // remove the read char
-  file = file.substr(1);
+  const doCache = opts.cache.indexOf('?') !== -1;
 
-  return fs.readFileSync(file, 'utf8');
+  if(doCache && CACHE[ file ]) {
+    return CACHE[ file ];
+  } else {
+    // remove the read char
+    let fileWithOutExecutionChar = file.substr(1);
+    let result = fs.readFileSync(fileWithOutExecutionChar, 'utf8');
+
+    if(doCache) {
+      CACHE[ file ] = result;
+    }
+
+    return result;
+  }
 }
 
 function getLinesFromExec(file, opts) {
-  // remove the exec char
-  file = file.substr(1);
+  const doCache = opts.cache.indexOf('!') !== -1;
 
-  return childProcess.execSync(file, { encoding: 'utf8' });
+  if(doCache && CACHE[ file ]) {
+    return CACHE[ file ];
+  } else {
+    // remove the exec char
+    let fileWithOutExecutionChar = file.substr(1);
+    let result = childProcess.execSync(fileWithOutExecutionChar, { encoding: 'utf8' });
+
+    if(doCache) {
+      CACHE[ file ] = result;
+    }
+
+    return result;
+  }
 }
