@@ -64,4 +64,4 @@ Sometimes you may want to just add headers to specific files. In this case you c
 
 ## License
 
-MIT, see [LICENSE.md](http://github.com/mikkoh/babel-plugin-add-header-comment/blob/master/LICENSE.md) for details.
+MIT, see [LICENSE.md](http://github.com/shopify/babel-plugin-add-header-comment/blob/master/LICENSE.md) for details.

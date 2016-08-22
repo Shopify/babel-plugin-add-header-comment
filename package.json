@@ -25,10 +25,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/mikkoh/babel-plugin-add-header-comment.git"
+    "url": "git://github.com/shopify/babel-plugin-add-header-comment.git"
   },
-  "homepage": "https://github.com/mikkoh/babel-plugin-add-header-comment",
+  "homepage": "https://github.com/shopify/babel-plugin-add-header-comment",
   "bugs": {
-    "url": "https://github.com/mikkoh/babel-plugin-add-header-comment/issues"
+    "url": "https://github.com/shopify/babel-plugin-add-header-comment/issues"
   }
 }
