@@ -4,3 +4,5 @@ node_modules
 .DS_Store
 bundle.js
 lib/
+test/toReadRand.txt
+test/outManyFile.js

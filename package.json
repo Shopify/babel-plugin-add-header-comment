@@ -17,7 +17,8 @@
     "mocha": "^3.0.2"
   },
   "scripts": {
-    "test": "npm run prepublish && mocha --compilers js:babel-register test/index.js",
+    "test": "npm run prepublish && npm run test-transpile && mocha --compilers js:babel-register test/index.js",
+    "test-transpile": "BABEL_ENV=test-plugin babel test/toTranspile > test/outManyFile.js",
     "prepublish": "babel -d lib/ src/"
   },
   "keywords": [
