@@ -5,3 +5,4 @@ node_modules
 bundle.js
 lib/
 test/toReadRand.txt
+test/outManyFile.js
