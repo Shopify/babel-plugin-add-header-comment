@@ -20,7 +20,7 @@
     "test": "npm run prepublish && npm run test-transpile && mocha --compilers js:babel-register test/index.js",
     "test-transpile": "BABEL_ENV=test-plugin babel test/toTranspile > test/outManyFile.js",
     "prepublish": "babel -d lib/ src/",
-    "lint": "eslint . --max-warnings 0 -c .eslintrc"
+    "lint": "eslint . --max-warnings 0 -c .eslintrc.json"
   },
   "keywords": [
     "babel,plugin,header,comment,license,documentation"

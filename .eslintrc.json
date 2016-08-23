@@ -1,4 +1,4 @@
-"eslintConfig": {
+{
   "extends": [
     "plugin:shopify/esnext",
     "plugin:shopify/node"
