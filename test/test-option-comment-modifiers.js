@@ -12,8 +12,8 @@ export default function() {
       plugins: [
         [plugin, {
           commentLineStart: '&',
-          commentStart: '/*&\n',
-          commentEnd: '\n&*/',
+          commentStart: '&\n',
+          commentEnd: '\n&',
           header: [
             'A',
             'B',

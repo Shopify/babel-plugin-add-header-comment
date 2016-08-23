@@ -20,19 +20,15 @@ export default (babel) => {
           state.opts
         );
 
+        opts.commentStart = opts.commentStart || `*${opts.newLineChar}`;
+        opts.commentEnd = opts.commentEnd || `${opts.newLineChar}*`;
+
         if (!opts.header && !opts.files) {
           throw new Error(
             'Set `babel-plugin-add-header` options pass in an Array of files to read/execute through the `header` variable or pass in `files` which define `header`\n'
           );
         }
-
-        opts.commentStart = opts.commentStart || `/**${opts.newLineChar}`;
-        opts.commentEnd = opts.commentEnd || `${opts.newLineChar}**/`;
-
-        // we want to remove the /* and */ from comment start and end
-        opts.commentStart = opts.commentStart.substr(2);
-        opts.commentEnd = opts.commentEnd.substring(0, opts.commentEnd.length - 2);
-
+        
         // traverse through header array and generate the comment content
         if (opts.header) {
           insertHeader(t, path, opts, opts.header);
@@ -85,8 +81,10 @@ function insertHeader(t, path, opts, header) {
   })
   .join(opts.newLineChar);
 
+  // this will add in the comment which was generated
   path.addComment('leading', `${opts.commentStart}${comment}${opts.commentEnd}`);
 
+  // the following two lines will add new lines below the comment which was injected
   path.unshiftContainer('body', t.noop());
   path.unshiftContainer('body', t.noop());
 }
