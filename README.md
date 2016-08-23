@@ -1,8 +1,6 @@
 # babel-plugin-add-header-comment
 
-[![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
-
-Will add a comment to the start of the transpiled code. For instance could be used:
+Will add a comment to the start of the transpiled code. Since transpiling via Babel is becoming one of the last steps of the build process it's handy to add some tooling around this final step. For instance could be used:
 - to add in license info 
 - add in version numbers to builds
 - etc.
