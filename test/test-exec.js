@@ -12,12 +12,12 @@ export default function() {
       plugins: [
         [plugin, {
           header: [
-            `!node ${path.resolve(__dirname, 'toExec.js')}`
-          ]
-        }]
-      ]
+            `!node ${path.resolve(__dirname, 'toExec.js')}`,
+          ],
+        }],
+      ],
     });
 
     assert.equal(result.code, expect, 'output matched expected');
   });
-};
+}

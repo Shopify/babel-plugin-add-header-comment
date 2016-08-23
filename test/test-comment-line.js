@@ -12,12 +12,12 @@ export default function() {
       plugins: [
         [plugin, {
           header: [
-            'have to support me and our three children and the dog once it gets '
-          ]
-        }]
-      ]
+            'have to support me and our three children and the dog once it gets ',
+          ],
+        }],
+      ],
     });
 
     assert.equal(result.code, expect, 'output matched expected');
   });
-};
+}

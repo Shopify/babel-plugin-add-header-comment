@@ -15,12 +15,12 @@ export default function() {
           header: [
             'A',
             'B',
-            'C'
-          ]
-        }]
-      ]
+            'C',
+          ],
+        }],
+      ],
     });
 
     assert.equal(result.code, expect, 'output matched expected');
   });
-};
+}

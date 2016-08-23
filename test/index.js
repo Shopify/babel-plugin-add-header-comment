@@ -15,7 +15,7 @@ describe('Using plugin in different ways', () => {
   testOptionNoHeader();
   testOptionCacheExec();
   testOptionCacheRead();
-  testCommentLine();  
+  testCommentLine();
   testExec();
   testRead();
   testUseAll();

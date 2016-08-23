@@ -14,12 +14,12 @@ export default function() {
           header: [
             `?${path.resolve(__dirname, 'toInsert.txt')}`,
             'have to support me and our three children and the dog once it gets ',
-            `!node ${path.resolve(__dirname, 'toExec.js')}`
-          ]
-        }]
-      ]
+            `!node ${path.resolve(__dirname, 'toExec.js')}`,
+          ],
+        }],
+      ],
     });
 
     assert.equal(result.code, expect, 'output matched expected');
   });
-};
+}

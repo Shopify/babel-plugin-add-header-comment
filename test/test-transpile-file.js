@@ -1,9 +1,6 @@
 import assert from 'assert';
 import fs from 'fs';
 import path from 'path';
-import childProcess from 'child_process';
-import * as babel from 'babel-core';
-import plugin from '../src';
 
 export default function() {
   it('should only add comment to one file', () => {
@@ -15,4 +12,4 @@ export default function() {
 
     assert(result, expect, 'output matched');
   });
-};
+}

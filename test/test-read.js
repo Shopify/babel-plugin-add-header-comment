@@ -12,12 +12,12 @@ export default function() {
       plugins: [
         [plugin, {
           header: [
-            `?${path.resolve(__dirname, 'toInsert.txt')}`
-          ]
-        }]
-      ]
+            `?${path.resolve(__dirname, 'toInsert.txt')}`,
+          ],
+        }],
+      ],
     });
 
     assert.equal(result.code, expect, 'output matched expected');
   });
-};
+}
