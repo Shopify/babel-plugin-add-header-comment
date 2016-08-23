@@ -6,7 +6,7 @@ import plugin from '../src';
 
 export default function() {
   it('should work using only read', () => {
-    const expect = fs.readFileSync(path.join(__dirname, 'expect-read'), 'utf8');
+    const expect = fs.readFileSync(path.join(__dirname, 'fixtures', 'expect-read'), 'utf8');
 
     const result = babel.transform('console.log("HEY GREAT COMMENT")', {
       plugins: [

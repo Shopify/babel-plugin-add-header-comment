@@ -6,7 +6,7 @@ import plugin from '../src';
 
 export default function() {
   it('options commentLineStart, commentStart, commentEnd should work', () => {
-    const expect = fs.readFileSync(path.join(__dirname, 'expect-option-comment-modifiers'), 'utf8');
+    const expect = fs.readFileSync(path.join(__dirname, 'fixtures', 'expect-option-comment-modifiers'), 'utf8');
 
     const result = babel.transform('console.log("HEY GREAT COMMENT")', {
       plugins: [

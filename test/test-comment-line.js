@@ -6,7 +6,7 @@ import plugin from '../src';
 
 export default function() {
   it('should work using comment line', () => {
-    const expect = fs.readFileSync(path.join(__dirname, 'expect-comment-line'), 'utf8');
+    const expect = fs.readFileSync(path.join(__dirname, 'fixtures', 'expect-comment-line'), 'utf8');
 
     const result = babel.transform('console.log("HEY GREAT COMMENT")', {
       plugins: [

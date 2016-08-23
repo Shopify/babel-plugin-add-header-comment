@@ -6,7 +6,7 @@ import plugin from '../src';
 
 export default function() {
   it('should work using only exec', () => {
-    const expect = fs.readFileSync(path.join(__dirname, 'expect-exec'), 'utf8');
+    const expect = fs.readFileSync(path.join(__dirname, 'fixtures', 'expect-exec'), 'utf8');
 
     const result = babel.transform('console.log("HEY GREAT COMMENT")', {
       plugins: [
