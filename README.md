@@ -55,7 +55,7 @@ Sometimes you may want to just add headers to specific files. In this case you c
 - `cache` - This is a string which represents what type of operations should be cached. For instance if you wanted to cache both read and command executions you could pass in `?!`. Default value: `'?'`
 - `commentStart`- This is a string which describes how the comment is started/opened. For instance if you'd like you're comment to start with `/*COMMENT START` pass in `'COMMENT START'`. Default value: `'*\n'`
 - `commentEnd`- This is a string which describes how the comment is ended/closed. For example if you'd like your comment to end with `COMMENT END*/` pass in `'COMMENT END'`. Default value: `'\n*'`
-- `commentLineStart`- A string which is the leading charachter before a comment. Default value: `'* '`;
+- `commentLineStart`- A string which is the leading charachter before a comment. Default value: `'* '`
 
 
 
