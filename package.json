@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-add-header-comment",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Will add a header comment (such as license, version info, etc.) to the start of the transpiled code",
   "main": "lib/index.js",
   "license": "MIT",
