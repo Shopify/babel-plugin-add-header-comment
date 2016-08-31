@@ -5,9 +5,10 @@ Will add a comment to the start of the transpiled code. Since transpiling via Ba
 - add in version numbers to builds
 - etc.
 
-## Usage
-
-[![NPM](https://nodei.co/npm/babel-plugin-add-header-comment.png)](https://www.npmjs.com/package/babel-plugin-add-header-comment)
+## Installation
+```bash
+$ npm install babel-plugin-add-header-comment
+```
 
 ## Example
 
@@ -57,9 +58,8 @@ Sometimes you may want to just add headers to specific files. In this case you c
 - `commentEnd`- This is a string which describes how the comment is ended/closed. For example if you'd like your comment to end with `COMMENT END*/` pass in `'COMMENT END'`. Default value: `'\n*'`
 - `commentLineStart`- A string which is the leading charachter before a comment. Default value: `'* '`
 
-
-
-
 ## License
 
 MIT, see [LICENSE.md](http://github.com/shopify/babel-plugin-add-header-comment/blob/master/LICENSE.md) for details.
+
+<img src="https://cdn.shopify.com/shopify-marketing_assets/builds/19.0.0/shopify-full-color-black.svg" width="200" />
