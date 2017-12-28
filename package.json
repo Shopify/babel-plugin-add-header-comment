@@ -21,6 +21,7 @@
     "test-transpile": "BABEL_ENV=test-plugin babel test/toTranspile > test/outManyFile.js",
     "test-clean-transpile": "rm test/outManyFile.js",
     "prepublish": "babel -d lib/ src/",
+    "prepare": "npm run prepublish",
     "lint": "eslint --max-warnings 0 -c .eslintrc.json src/ test/",
     "lint-allow-warning": "eslint -c .eslintrc.json src/ test/"
   },

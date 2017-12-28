@@ -16,6 +16,7 @@ export default (babel) => {
             charExec: '!',
             newLineChar: '\n',
             cache: '?',
+            line: false,
           },
           state.opts
         );
@@ -74,15 +75,25 @@ function insertHeader(t, path, opts, header) {
 
     // split all the lines returned from the file/exec
     return lines.split(opts.newLineChar)
-    .map((line) => {
-      return `${opts.commentLineStart}${line}`;
+    .map((line, idx) => {
+      let prefix;
+      if (opts.line) {
+        prefix = idx === 0 ? ' ' : '// ';
+      } else {
+        prefix = opts.commentLineStart;
+      }
+      return `${prefix}${line}`;
     })
     .join(opts.newLineChar);
   })
   .join(opts.newLineChar);
 
   // this will add in the comment which was generated
-  path.addComment('leading', `${opts.commentStart}${comment}${opts.commentEnd}`);
+  if (opts.line) {
+    path.addComment('leading', `${comment}`, opts.line);
+  } else {
+    path.addComment('leading', `${opts.commentStart}${comment}${opts.commentEnd}`);
+  }
 
   // the following two lines will add new lines below the comment which was injected
   path.unshiftContainer('body', t.noop());
