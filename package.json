@@ -17,6 +17,7 @@
     "mocha": "^3.0.2"
   },
   "scripts": {
+    "postinstall": "npm run prepublish",
     "test": "npm run lint-allow-warning && npm run prepublish && npm run test-transpile && mocha --compilers js:babel-register test/index.js && npm run test-clean-transpile",
     "test-transpile": "BABEL_ENV=test-plugin babel test/toTranspile > test/outManyFile.js",
     "test-clean-transpile": "rm test/outManyFile.js",

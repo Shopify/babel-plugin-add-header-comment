@@ -57,6 +57,7 @@ Sometimes you may want to just add headers to specific files. In this case you c
 - `commentStart`- This is a string which describes how the comment is started/opened. For instance if you'd like you're comment to start with `/*COMMENT START` pass in `'COMMENT START'`. Default value: `'*\n'`
 - `commentEnd`- This is a string which describes how the comment is ended/closed. For example if you'd like your comment to end with `COMMENT END*/` pass in `'COMMENT END'`. Default value: `'\n*'`
 - `commentLineStart`- A string which is the leading charachter before a comment. Default value: `'* '`
+- `line`- This is a boolean parameter that switch between comment type `CommentLine` or `CommentBlock`. By default it is `CommentBlock`. Pay attention when using `line: true` other parameter `commentLineStart` will be ignored. Default value: `false`
 
 ## License
 
