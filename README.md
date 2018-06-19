@@ -1,3 +1,5 @@
+[![Travis](https://travis-ci.com/Shopify/babel-plugin-add-header-comment.svg?branch=master)](https://travis-ci.com/Shopify/babel-plugin-add-header-comment)
+
 # babel-plugin-add-header-comment
 
 Will add a comment to the start of the transpiled code. Since transpiling via Babel is becoming one of the last steps of the build process it's handy to add some tooling around this final step. For instance could be used:
